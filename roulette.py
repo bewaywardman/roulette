@@ -34,15 +34,13 @@ def roulette() -> None:
 	Stats['player_money'] = 1000  # in pennies probably
 
 	jet_fuel_cant_melt_steel_beams = True  # Illuminati Confirmed
-
-
+	
 	# Here we fucking go
-	print('Welcome to the best roulette simulator ever 8/8')  # sounds gr8 m8
 	while jet_fuel_cant_melt_steel_beams:
 		try:
 			print_stats(Stats)
 		except:
-			print('No stats yet')
+			print('Welcome to the best roulette simulator ever')  # sounds gr8 m8 i rate 8/8
 		all_bets = []
 		while jet_fuel_cant_melt_steel_beams:
 			another = input('Do you want to make another bet? [yes/no] ')
@@ -64,13 +62,13 @@ def print_stats(Stats: dict) -> None:
 	for spin in Stats['previous_spins']:
 		print('\t{:3}	{:5}	{:5}'.format(spin[0], spin[1], spin[2]))  # number, color, even. There should be a better way to do this
 	print()
-	print('\tRed: {:5.0f}%  Black: {:5.0f}%'.format(Stats['red'] / Stats['spins'] * 100,
+	print('\tRed : {:5.0f}%  Black:{:5.0f}%'.format(Stats['red'] / Stats['spins'] * 100,
 													Stats['black'] / Stats['spins'] * 100))
-	print('\tEven: {:5.0f}%  Odd: {:5.0f}%'.format(Stats['even'] / Stats['spins'] * 100,
+	print('\tEven: {:5.0f}%  Odd  :{:5.0f}%'.format(Stats['even'] / Stats['spins'] * 100,
 												   Stats['odd'] / Stats['spins'] * 100))
 	print('\t1-18: {:5.0f}%  19-36: {:5.0f}'.format(Stats['first'] / Stats['spins'] * 100,
 													Stats['second'] / Stats['spins'] * 100))
-	print('Your money: $' + Stats['player_money'])
+	print('Your money: $', Stats['player_money'])
 
 
 # Nonon is cuter than Ryuko tbh
@@ -158,6 +156,7 @@ def spin_wheel(all_bets: list, Stats: dict) -> None:
 			print('Bet {} loses ${}'.format(bet[0], bet[1]))
 
 	Stats['player_money'] += winnings
+
 
 roulette()
 # may the source be with you
