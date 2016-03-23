@@ -55,7 +55,6 @@ def roulette() -> None:
 		spin_wheel(all_bets, Stats)
 
 
-# Twilight is best pony
 def print_stats(Stats: dict) -> None:
 	'''Prints stats to output.
 	Does not work without stats'''
@@ -70,8 +69,6 @@ def print_stats(Stats: dict) -> None:
 													Stats['second'] / Stats['spins'] * 100))
 	print('Your money: $', Stats['player_money'])
 
-
-# Nonon is cuter than Ryuko tbh
 
 
 def betting(all_bets: list, Stats: dict) -> None:
@@ -100,7 +97,6 @@ def betting(all_bets: list, Stats: dict) -> None:
 		print('Command not recognized.')
 
 
-# Pony is love. Pony is life.
 def spin_wheel(all_bets: list, Stats: dict) -> None:
 	'''Spins wheel and pays bets'''
 	from random import choice
